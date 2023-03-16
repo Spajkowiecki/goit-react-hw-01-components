@@ -1,0 +1,24 @@
+.personData {
+  text-align: center;
+  padding: 50px;
+}
+
+.personData img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.personData ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personData ul li:first-child {
+  font-size: 32px;
+}
+
+.personData ul li:not(:first-child) {
+  color: rgba(4, 21, 42, 0.5);
+  font-size: 21px;
+}

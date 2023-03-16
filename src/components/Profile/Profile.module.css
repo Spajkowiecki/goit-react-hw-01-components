@@ -1,0 +1,10 @@
+.profile {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.is-elevated {
+  composes: profile;
+  box-shadow: 1px 1px 11px 1px rgb(213, 213, 213);
+}

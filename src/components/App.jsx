@@ -1,8 +1,8 @@
-import Profile from './Profile';
-import Media from './Media';
 import dane from '../data/user.json';
-import './Profile.css';
 
+import Profile from './Profile/Profile';
+import PersonData from './PersonData/PersonData';
+import Data from './Data/Data';
 //centrowanie
 const style = {
   height: '100vh',
@@ -16,15 +16,16 @@ const style = {
 //tu bede wrzucał wszystkie komponenty
 export const App = () => {
   //Nie można używać
-  const { stats, ...otherProps } = dane;
+  const { stats, ...otherData } = dane;
   return (
     <div style={style}>
-      <Profile {...otherProps}>
-        <ul className="profile__media">
+      <Profile elevated={true}>
+        <PersonData {...otherData} />
+        <ul>
           {Object.entries(stats).map(([key, value]) => {
             return (
               <li>
-                <Media title={key} key={key} value={value}></Media>
+                <Data title={key} key={key} value={value} />
               </li>
             );
           })}
