@@ -1,6 +1,4 @@
-import style2 from '../Data/Data.module.css';
 import style from '../Statistics/Statistics.module.css';
-import Data from '../Data/Data';
 
 export const Statistics = ({ ...props }) => {
   return (
