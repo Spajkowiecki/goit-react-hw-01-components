@@ -1,0 +1,47 @@
+.statistics {
+  border-radius: 10px;
+  background: white;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.statistics h2 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+.statistics ul {
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+
+.statistics li {
+  font-size: 1.8rem;
+  padding: 20px;
+}
+
+.statistics ul li:nth-child(1) {
+  background: #4dc5f7;
+}
+.statistics ul li:nth-child(2) {
+  background: #a73bf3;
+}
+.statistics ul li:nth-child(3) {
+  background: #e54d62;
+}
+.statistics ul li:nth-child(4) {
+  background: #20b8c5;
+}
+.statistics ul li:nth-child(5) {
+  background: #4dc5f7;
+}
+
+.statistics ul li p:first-child {
+  position: relative;
+  top: -10px;
+  font-size: 1.2rem;
+}

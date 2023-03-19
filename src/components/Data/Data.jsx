@@ -1,18 +1,18 @@
-import styles from './Data.module.css';
-import PropTypes from 'prop-types';
+import style from './Data.module.css';
 
-export const Data = ({ title, value }) => {
+export const Data = ({ ...props }) => {
   return (
-    <div className={styles.data}>
-      <p>{title}</p>
-      <p>{value}</p>
-    </div>
+    <ul className={style.data}>
+      {Object.entries(props).map(([key, value]) => {
+        return (
+          <li key={key}>
+            <p>{key}</p>
+            <p>{value}</p>
+          </li>
+        );
+      })}
+    </ul>
   );
-};
-
-Data.propTypes = {
-  title: PropTypes.string.isRequired,
-  value: PropTypes.number,
 };
 
 export default Data;

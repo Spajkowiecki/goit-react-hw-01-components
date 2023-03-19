@@ -2,9 +2,40 @@
   background: white;
   border-radius: 10px;
   overflow: hidden;
+  text-align: center;
+  font-size: 2rem;
+  color: #122236;
 }
 
-.is-elevated {
-  composes: profile;
-  box-shadow: 1px 1px 11px 1px rgb(213, 213, 213);
+.person {
+  padding: 40px;
+}
+
+.person ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.person ul li:first-child {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.person ul li:not(:first-child) {
+  font-size: 21px;
+  color: #12223627;
+}
+
+.profile img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.isOutlined {
+  border: 2px solid #122236;
+}
+
+.isElevated {
+  box-shadow: 1px 1px 10px 3px #12223627;
 }

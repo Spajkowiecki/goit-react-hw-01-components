@@ -1,17 +1,36 @@
-import style from './Profile.module.css';
-import PropTypes from 'prop-types';
+import style from '../Profile/Profile.module.css';
+import noImage from '../../images/no-image.png';
 import clsx from 'clsx';
 
-export const Profile = ({ children, elevated }) => {
+export const Profile = ({
+  avatar,
+  username,
+  tag,
+  location,
+  children,
+  outlined,
+  elevated,
+}) => {
   return (
-    <div className={clsx(style.profile, elevated && style['is-elevated'])}>
+    //kontenter dla profile
+    <div
+      className={clsx(
+        style.profile,
+        outlined && style['isOutlined'],
+        elevated && style['isElevated']
+      )}
+    >
+      <div className={style.person}>
+        <img src={avatar ? avatar : noImage} alt="profile avatar" />
+        <ul>
+          <li>{username}</li>
+          <li>@{tag}</li>
+          <li>{location}</li>
+        </ul>
+      </div>
       {children}
     </div>
   );
-};
-
-Profile.propTypes = {
-  elevated: PropTypes.bool,
 };
 
 export default Profile;

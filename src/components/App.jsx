@@ -1,12 +1,16 @@
+//dane z plikow JSON
 import dane from '../data/user.json';
+import dane2 from '../data/data.json';
 
 import Profile from './Profile/Profile';
-import PersonData from './PersonData/PersonData';
-import Data from './Data/Data';
+import Stats from './Data/Data';
+import Statistics from './Statistics/Statistics';
+
 //centrowanie
 const style = {
   height: '100vh',
   display: 'flex',
+  gap: '20px',
   justifyContent: 'center',
   alignItems: 'center',
   fontSize: 40,
@@ -16,21 +20,14 @@ const style = {
 //tu bede wrzucał wszystkie komponenty
 export const App = () => {
   //Nie można używać
-  const { stats, ...otherData } = dane;
+
   return (
     <div style={style}>
-      <Profile elevated={true}>
-        <PersonData {...otherData} />
-        <ul>
-          {Object.entries(stats).map(([key, value]) => {
-            return (
-              <li>
-                <Data title={key} key={key} value={value} />
-              </li>
-            );
-          })}
-        </ul>
+      <Profile elevated="isElevated" {...dane}>
+        <Stats {...dane.stats} />
       </Profile>
+
+      <Statistics {...dane2} />
     </div>
   );
 };
