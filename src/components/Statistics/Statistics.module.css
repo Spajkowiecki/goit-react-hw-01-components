@@ -9,7 +9,7 @@
 }
 
 .statistics h2 {
-  width: 50vw;
+  width: 100%;
   max-width: 400px;
   text-align: center;
   font-size: 1.6rem;
@@ -18,20 +18,19 @@
 
 .statistics ul {
   display: flex;
-  justify-content: space-around;
 }
 
 .statistics li {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: calc(100% / 4);
   font-size: 1.4rem;
   padding: 10px 15px;
-  width: 100%;
   background: rgb(255, 212, 212);
   border: 1px solid rgb(255, 98, 98);
 }
 
 .statistics li p:last-child {
-  font-weight: 700;
+  font-weight: 00;
 }
