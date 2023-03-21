@@ -11,9 +11,10 @@ import Friends from './Friends/Friends';
 import Table from './Table/Table';
 //centrowanie
 const style = {
-  height: '100vh',
+  //  height: '100vh',
   padding: '20px',
   display: 'flex',
+  flexDirection: 'column',
   gap: '20px',
   justifyContent: 'center',
   alignItems: 'center',

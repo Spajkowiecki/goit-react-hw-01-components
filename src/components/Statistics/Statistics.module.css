@@ -1,47 +1,37 @@
 .statistics {
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   background: white;
-  font-size: 2rem;
+  margin: 20px;
   overflow: hidden;
 }
 
 .statistics h2 {
-  font-weight: 400;
+  width: 50vw;
+  max-width: 400px;
   text-align: center;
-  font-size: 1.5rem;
-  padding: 20px 0;
+  font-size: 1.6rem;
+  padding: 10px 0;
 }
 
 .statistics ul {
-  display: grid;
-  color: white;
-  grid-template-columns: repeat(5, 1fr);
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 .statistics li {
-  font-size: 1.8rem;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+  width: 100%;
+  background: rgb(255, 212, 212);
+  border: 1px solid rgb(255, 98, 98);
 }
 
-.statistics ul li:nth-child(1) {
-  background: #4dc5f7;
-}
-.statistics ul li:nth-child(2) {
-  background: #a73bf3;
-}
-.statistics ul li:nth-child(3) {
-  background: #e54d62;
-}
-.statistics ul li:nth-child(4) {
-  background: #20b8c5;
-}
-.statistics ul li:nth-child(5) {
-  background: #4dc5f7;
-}
-
-.statistics ul li p:first-child {
-  position: relative;
-  top: -10px;
-  font-size: 1.2rem;
+.statistics li p:last-child {
+  font-weight: 700;
 }
