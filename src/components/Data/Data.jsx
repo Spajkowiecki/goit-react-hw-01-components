@@ -1,4 +1,5 @@
 import style from './Data.module.css';
+import PropTypes from 'prop-types';
 
 export const Data = ({ ...props }) => {
   return (
@@ -13,6 +14,11 @@ export const Data = ({ ...props }) => {
       })}
     </ul>
   );
+};
+
+Data.propTypes = {
+  key: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default Data;

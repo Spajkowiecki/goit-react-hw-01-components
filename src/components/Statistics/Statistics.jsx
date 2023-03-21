@@ -1,9 +1,9 @@
 import style from '../Statistics/Statistics.module.css';
 
-export const Statistics = ({ ...props }) => {
+export const Statistics = ({ title, ...props }) => {
   return (
     <div className={style.statistics}>
-      <h2>UPLOAD STATS</h2>
+      {title ? <h2>{title}</h2> : ' '}
       <ul>
         {Object.entries({ ...props }).map(([key, { ...value }]) => {
           return (

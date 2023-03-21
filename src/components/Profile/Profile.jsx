@@ -1,6 +1,7 @@
 import style from '../Profile/Profile.module.css';
 import noImage from '../../images/no-image.png';
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 export const Profile = ({
   avatar,
@@ -31,6 +32,15 @@ export const Profile = ({
       {children}
     </div>
   );
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  outlined: PropTypes.string,
+  elevated: PropTypes.string,
 };
 
 export default Profile;
