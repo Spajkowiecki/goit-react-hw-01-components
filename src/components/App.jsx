@@ -11,7 +11,7 @@ import { Transaction } from './Transaction/Transaction';
 
 //centrowanie
 const style = {
-  height: '100vh',
+  //height: '100vh',
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
