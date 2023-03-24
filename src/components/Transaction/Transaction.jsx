@@ -1,9 +1,8 @@
-import style from './Table.module.css';
-import PropTypes from 'prop-types';
+import style from './Transaction.module.css';
 
-export const Table = ({ items }) => {
+export function Transaction({ items }) {
   return (
-    <table className={style.table}>
+    <table className={style.transaction}>
       <thead>
         <tr>
           <th>Type</th>
@@ -23,12 +22,4 @@ export const Table = ({ items }) => {
       </tbody>
     </table>
   );
-};
-
-Table.propTypes = {
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.string,
-};
-
-export default Table;
+}

@@ -1,46 +1,39 @@
-import style from '../Profile/Profile.module.css';
-import noImage from '../../images/no-image.png';
-import clsx from 'clsx';
+import style from './Profile.module.css';
 import PropTypes from 'prop-types';
 
-export const Profile = ({
-  avatar,
-  username,
-  tag,
-  location,
-  children,
-  outlined,
-  elevated,
-}) => {
+export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
-    //kontenter dla profile
-    <div
-      className={clsx(
-        style.profile,
-        outlined && style['isOutlined'],
-        elevated && style['isElevated']
-      )}
-    >
-      <div className={style.person}>
-        <img src={avatar ? avatar : noImage} alt="profile avatar" />
-        <ul>
-          <li>{username}</li>
-          <li>@{tag}</li>
-          <li>{location}</li>
-        </ul>
+    <div className={style.profile}>
+      <div className={style.description}>
+        <img className={style.avatar} src={avatar} alt={''} />
+        <p className={style.username}>{username}</p>
+        <p className={style.tag}>@{tag}</p>
+        <p className={style.location}>{location}</p>
       </div>
-      {children}
+
+      <ul className={style.stats}>
+        <li>
+          <span className={style.label}>Followers</span>
+          <span className={style.quantity}>{stats.followers}</span>
+        </li>
+        <li>
+          <span className={style.label}>Views</span>
+          <span className={style.quantity}>{stats.views}</span>
+        </li>
+        <li>
+          <span className={style.label}>Likes</span>
+          <span className={style.quantity}>{stats.likes}</span>
+        </li>
+      </ul>
     </div>
   );
 };
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  outlined: PropTypes.string,
-  elevated: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
 };
 
 export default Profile;

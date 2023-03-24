@@ -1,17 +1,17 @@
 //dane z plikow JSON
-import dane from '../data/user.json';
+import user from '../data/user.json';
 import dane2 from '../data/data.json';
 import dane3 from '../data/friends.json';
 import dane4 from '../data/transactions.json';
 
 import Profile from './Profile/Profile';
-import Stats from './Data/Data';
 import Statistics from './Statistics/Statistics';
-import Friends from './Friends/Friends';
-import Table from './Table/Table';
+import { FriendList, FriendListItem } from './FriendList/FriendList';
+import { Transaction } from './Transaction/Transaction';
+
 //centrowanie
 const style = {
-  //  height: '100vh',
+  height: '100vh',
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
@@ -28,13 +28,18 @@ export const App = () => {
 
   return (
     <div style={style}>
-      <Profile elevated="isElevated" {...dane}>
-        <Stats {...dane.stats} />
-      </Profile>
-
-      <Statistics title="UPLOAD STATS" {...dane2} />
-      <Friends {...dane3} />
-      <Table items={dane4} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={dane2} />
+      <FriendList>
+        <FriendListItem friends={dane3} />
+      </FriendList>
+      <Transaction items={dane4} />
     </div>
   );
 };

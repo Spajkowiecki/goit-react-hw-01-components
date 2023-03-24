@@ -1,0 +1,20 @@
+.transaction {
+  width: fit-content;
+  font-size: 1.5rem;
+}
+
+.transaction th {
+  width: 350px;
+  padding: 0 10px;
+  background: rgb(91, 91, 204);
+}
+
+.transaction tr {
+  background: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.transaction tr:nth-child(2n) {
+  background-color: #ecf1f3;
+}

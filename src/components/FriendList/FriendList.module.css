@@ -1,0 +1,28 @@
+.friendList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.item {
+  min-width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.status {
+  background: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.status.isOnline {
+  background: green;
+}
