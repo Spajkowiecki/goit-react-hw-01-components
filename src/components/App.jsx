@@ -1,4 +1,6 @@
 //dane z plikow JSON
+import style from './App.module.css';
+
 import user from '../data/user.json';
 import dane2 from '../data/data.json';
 import dane3 from '../data/friends.json';
@@ -9,25 +11,12 @@ import Statistics from './Statistics/Statistics';
 import { FriendList, FriendListItem } from './FriendList/FriendList';
 import { Transaction } from './Transaction/Transaction';
 
-//centrowanie
-const style = {
-  //height: '100vh',
-  padding: '20px',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '20px',
-  justifyContent: 'center',
-  alignItems: 'center',
-  fontSize: 40,
-  color: '#010101',
-};
-
 //tu bede wrzucał wszystkie komponenty
 export const App = () => {
   //Nie można używać
 
   return (
-    <div style={style}>
+    <div className={style.app}>
       <Profile
         username={user.username}
         tag={user.tag}
